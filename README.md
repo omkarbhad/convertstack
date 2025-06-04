@@ -1,88 +1,109 @@
-# Video to GIF Converter
+# 🎞️ Video to GIF Converter
 
-A simple yet powerful desktop application to convert video files to high-quality GIFs with customizable settings. Built with Python, PyQt5, and FFmpeg.
+A simple yet powerful desktop application to convert video files into high-quality GIFs with customizable settings. Built with **Python**, **PyQt5**, and **FFmpeg**, this tool offers flexibility and efficiency for quick GIF generation.
 
-![Screenshot](screenshot.png)
+---
 
-## Features
+## ✨ Features
 
-- 🎥 Convert video files to GIF format
-- ⚡ Customize start time and duration
-- 🎚️ Adjust FPS (frames per second)
-- 🖼️ Set custom dimensions (width/height)
-- 🎨 Control GIF quality
-- 🚀 Optimized output with gifsicle
-- 📊 Real-time progress tracking
-- 🎨 Dark theme UI
+* 🎥 **Convert videos to GIF** with a few clicks
+* ⏱️ **Set start time and duration** for trimmed GIFs
+* 🎚️ **Adjust FPS** (frames per second) to control smoothness
+* 🖼️ **Resize output** with custom width and height
+* 🎨 **Configure quality level** for balance between size and clarity
+* 🚀 **Optimize output** using `gifsicle`
+* 📊 **Track conversion progress** in real-time
+* 🌒 **Dark-themed UI** for a modern, user-friendly experience
 
-## Prerequisites
+---
 
-- Python 3.7+
-- FFmpeg
-- gifsicle (for optimization)
+## ⚙️ Prerequisites
 
-## Installation
+* Python 3.7+
+* [FFmpeg](https://ffmpeg.org/)
+* [gifsicle](https://www.lcdf.org/gifsicle/) (for optimization)
 
-1. Clone the repository:
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+
    ```bash
    git clone https://github.com/omkarbhad/convertstack.git
    cd convertstack
    ```
 
-2. Install the required Python packages:
+2. **Install Python dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Install system dependencies:
-   - **macOS (using Homebrew):**
+3. **Install system tools**
+
+   * **macOS (Homebrew)**
+
      ```bash
      brew install ffmpeg gifsicle
      ```
-   - **Linux (Debian/Ubuntu):**
+
+   * **Ubuntu/Debian**
+
      ```bash
      sudo apt-get update
      sudo apt-get install ffmpeg gifsicle
      ```
-   - **Windows (using Chocolatey):**
+
+   * **Windows (Chocolatey)**
+
      ```cmd
      choco install ffmpeg gifsicle
      ```
 
-## Usage
+---
 
-1. Run the application:
+## 🚀 Usage
+
+1. Launch the app:
+
    ```bash
    python videotogif.py
    ```
 
-2. Click "Select Video" to choose a video file
-3. Adjust the settings as needed:
-   - Start time and duration
-   - FPS (frames per second)
-   - Output dimensions
-   - Quality level
+2. Select your video file.
 
-3. Click "Convert" to start the conversion
-4. The optimized GIF will be saved to your specified location
+3. Customize the conversion:
 
-## Requirements
+   * Start time, duration
+   * FPS (frames per second)
+   * Output size and quality
 
-- PyQt5
-- ffmpeg-python
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## Author
-
-[Your Name](https://github.com/omkarbhad)
+4. Click **Convert** to generate and save the GIF.
 
 ---
 
-Made with ❤️ and Python
+## 📚 Requirements
+
+* `PyQt5`
+* `ffmpeg-python`
+
+---
+
+## 📝 License
+
+Licensed under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve the app.
+
+---
+
+## 👨‍💻 Author
+
+**[Omkar Bhad](https://github.com/omkarbhad)**
+Built with ❤️ and Python.
+

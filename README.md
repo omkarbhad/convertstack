@@ -1,4 +1,4 @@
-# 🎞️ Video to GIF Converter
+# 🎞️ Video to GIF Converter (More coming soon)
 
 A simple yet powerful desktop application to convert video files into high-quality GIFs with customizable settings. Built with **Python**, **PyQt5**, and **FFmpeg**, this tool offers flexibility and efficiency for quick GIF generation.
 

@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel,
     QPushButton, QSlider, QFileDialog, QMessageBox, QProgressBar, QFrame,
-    QCheckBox, QComboBox
+    QCheckBox, QComboBox, QPlainTextEdit
 )
 from PyQt5.QtCore import Qt, QThread, pyqtSignal, QTimer, QObject
 import os
@@ -523,15 +523,22 @@ class VideoToGifConverterGUI(QMainWindow):
         self.cancel_button.setEnabled(False)
         button_layout.addWidget(self.cancel_button)
         content_layout.addLayout(button_layout)
-        self.log_output = QLabel()
-        self.log_output.setText("Log output will appear here...")
-        self.log_output.setStyleSheet("background-color: #1E293B; color: #E2E8F0; border: 1px solid #334155; border-radius: 4px; padding: 8px;")
-        self.log_output.setFixedHeight(40)
-        self.log_output.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.log_output = QPlainTextEdit()
+        self.log_output.setReadOnly(True)
+        self.log_output.setStyleSheet(
+            "background-color: #1E293B; color: #E2E8F0; "
+            "border: 1px solid #334155; border-radius: 4px; padding: 8px;"
+        )
+        self.log_output.setFixedHeight(120)
         content_layout.addWidget(self.log_output)
 
     def append_log(self, msg: str):
-        self.log_output.setText(msg)
+        """Append a log message to the log output widget."""
+        self.log_output.appendPlainText(msg)
+        # Keep the cursor at the end so the latest message is visible.
+        self.log_output.verticalScrollBar().setValue(
+            self.log_output.verticalScrollBar().maximum()
+        )
 
     def select_input(self):
         options = QFileDialog.Options()
